@@ -1,0 +1,221 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #232f3e;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+#searchBox {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-card p.price {
+  font-size: 16px;
+  color: green;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.product-card button {
+  background-color: #ff9900;
+  border: none;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-card button:hover {
+  background-color: #e68a00;
+}
+
+
+/* Basic styling for the form container */
+#buyFormContainer {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed position to display it over the page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form styling */
+#buyForm {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px; /* Form width constraint */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Heading */
+#buyForm h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-family: Arial, sans-serif;
+}
+
+/* Input fields styling */
+#buyForm input, #buyForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+#buyForm textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+/* Placeholder text styling */
+#buyForm input::placeholder, #buyForm textarea::placeholder {
+  color: #999;
+}
+
+/* Submit and Cancel button styling */
+#buyForm button {
+  width: 48%;
+  padding: 10px;
+  margin: 10px 1%;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#buyForm button.close-btn {
+  background-color: #f44336; /* Red background for cancel button */
+}
+
+/* Button hover effects */
+#buyForm button:hover {
+  opacity: 0.9;
+}
+
+/* Close button styling for the popup */
+.close-btn {
+  display: inline-block;
+  background-color: #f44336; /* Red background */
+  padding: 10px 20px;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #d32f2f; /* Darker red when hovering */
+}
+
+/* Media query for smaller screens (mobile-first) */
+@media screen and (max-width: 600px) {
+  /* Make the form smaller and more compact */
+  #buyForm {
+    width: 90%;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  /* Adjust input font size */
+  #buyForm input, #buyForm textarea {
+    font-size: 14px;
+  }
+
+  /* Adjust button sizes for mobile screens */
+  #buyForm button {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* Adjust the form layout for very small screens */
+  #buyForm h2 {
+    font-size: 1.2rem;
+  }
+
+  #buyForm button {
+    width: 100%;
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  /* Make input fields and buttons slightly larger for touch interactions */
+  #buyForm input, #buyForm textarea {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .product-card {
+    width: 90%;
+  }
+
+  #searchBox {
+    width: 90%;
+  }
+
+  header {
+    font-size: 18px;
+  }
+}
