@@ -60,13 +60,18 @@
 
 <!-- BUY FORM POPUP -->
 <div id="buyFormContainer">
-  <form id="buyForm">
+  <form
+    id="buyForm"
+    action="https://formspree.io/f/xanoaqad"
+    method="POST"
+  >
     <h2>Place Your Order</h2>
-    <!-- Auto-filled Product Name (read-only) -->
-    <input type="text" name="productName" id="productName" readonly>
 
-    <!-- Your Name Field -->
-    <input type="text" id="yourName" name="yourName" placeholder="Your Name" required>
+    <!-- Product name (readonly, passed dynamically via JS) -->
+    <input type="text" name="product" id="productName" readonly required>
+
+    <!-- User Name -->
+    <input type="text" name="name" id="yourName" placeholder="Your Name" required>
 
     <!-- Phone Number -->
     <input type="text" name="phone" placeholder="Your Phone Number" required>
@@ -77,11 +82,14 @@
     <!-- Address -->
     <textarea name="address" placeholder="Your Address" required></textarea>
 
-    <!-- Submit & Cancel Buttons -->
+    <!-- Submit Button -->
     <button type="submit">Submit Order</button>
+
+    <!-- Cancel Button -->
     <button type="button" class="close-btn" onclick="closeForm()">Cancel</button>
   </form>
 </div>
+
 
 
   <script src="script.js"></script>
