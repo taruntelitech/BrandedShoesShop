@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Branded Shoes Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Branded Shoes Shop</div>
+    
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="sale.html">Sale</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section>
+  <input type="text" id="searchBox" placeholder="Search Shoes..." onkeyup="searchProducts()">
+</section>
+
+  <!-- PRODUCTS -->
+  <div class="container">
+    <div class="product-card" data-name="Nike Air Max">
+      <img src="Nike Air Max.jpg" alt="Nike Air Max">
+      <h3>Nike Air Max</h3>
+      <p class="price">$120</p>
+      <button onclick="openForm('Nike Air Max')">Buy</button>
+    </div>
+    <div class="product-card" data-name="Nike Jordan Retro">
+      <img src="Nike Jordan Retro.jpg" alt="Nike Jordan Retro">
+      <h3>Nike Jordan Retro</h3>
+      <p class="price">$150</p>
+      <button onclick="openForm('Nike Jordan Retro')">Buy</button>
+    </div>
+    <div class="product-card" data-name="Nike Air Force 1">
+      <img src="Nike Air Force 1.jpg" alt="Nike Air Force 1">
+      <h3>Nike Air Force 1</h3>
+      <p class="price">$110</p>
+      <button onclick="openForm('Nike Air Force 1')">Buy</button>
+    </div>
+    <div class="product-card" data-name="Nike ZoomX Vaporfly">
+      <img src="Nike ZoomX Vaporfly.jpg" alt="Nike ZoomX Vaporfly">
+      <h3>Nike ZoomX Vaporfly</h3>
+      <p class="price">$200</p>
+      <button onclick="openForm('Nike ZoomX Vaporfly')">Buy</button>
+    </div>
+  </div>
+
+  <!-- BUY FORM POPUP -->
+  <div id="buyFormContainer">
+   <form id="buyform" class="buyform" action="https://formspree.io/f/xanoaqad" method="POST">
+      <h2>Place Your Order</h2>
+
+      <input type="text" name="product" id="productName" readonly required>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="text" name="phone" placeholder="Your Phone Number" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="address" placeholder="Your Address" required></textarea>
+
+      <button type="submit" class="buy-btn">Submit Order</button>
+      <button type="button" class="close-btn" onclick="closeForm()">Cancel</button>
+    </form>
+  </div>
+
+<footer>
+  <p>&copy; <span>2025</span> Branded Shoes Shop. All Rights Reserved.</p>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

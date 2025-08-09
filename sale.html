@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sale</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+ <!-- HEADER -->
+  <header>
+    <div class="logo">Branded Shoes Shop</div>
+    
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Men</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="sale.html">Sale</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+<section>
+    <!-- SEARCH BOX -->
+  <input type="text" id="searchBox" placeholder="Search Shoes..." onkeyup="searchProducts()">
+</section>
+
+
+  <section class="products">
+    <div class="product-card" data-name="Nike Blazer">
+      <img src="Nike Blazer.jpg" alt="Nike Blazer">
+      <h3>Nike Blazer</h3>
+      <p><del>$100</del> $80</p>
+      <button onclick="openForm('Nike Blazer')">Buy Now</button>
+    </div>
+
+    <div class="product-card" data-name="Nike Pegasus">
+      <img src="Nike Pegasus.jpg" alt="Nike Pegasus">
+      <h3>Nike Pegasus</h3>
+      <p><del>$90</del> $70</p>
+      <button onclick="openForm('Nike Pegasus')">Buy Now</button>
+    </div>
+  </section>
+
+   <!-- BUY FORM POPUP -->
+  <div id="buyFormContainer">
+    <form id="buyform" class="buyform" action="https://formspree.io/f/xanoaqad" method="POST">
+      <h2>Place Your Order</h2>
+
+      <input type="text" name="product" id="productName" readonly required>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="text" name="phone" placeholder="Your Phone Number" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="address" placeholder="Your Address" required></textarea>
+
+      <button type="submit" class="buy-btn">Submit Order</button>
+      <button type="button" class="close-btn" onclick="closeForm()">Cancel</button>
+    </form>
+  </div>
+
+  <footer>
+  <p>&copy; <span>2025</span> Branded Shoes Shop. All Rights Reserved.</p>
+</footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
